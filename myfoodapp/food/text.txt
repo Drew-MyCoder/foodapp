@@ -1,0 +1,18 @@
+this file contains some explanations and documentation
+1. cd into the folder where you want to create django project
+2. run django-admin startproject 'name of project' not in quotations
+3. cd into app folder
+4. run python manage.py runserver to generate localhost server
+5. create a new file 'urls.py' in project folder
+6. create a views function, then urlpattern in urls.py app(in this case food app) afterwards a path in urls.py of project (in this case myfoodapp)
+7. add the name of app (food) in the installed apps in settings.py
+8. run python manage.py migrate
+9. create models in models.py (helps us create tables to manage our database)
+10. run python manage.py makemigrations food
+11. run python manage.py sqlmigrate food 0001 (create sql)
+12. run python manage.py migrate
+13. python manage.py shell to enter shell. proceed to import the model created
+14. from food.models import Item(this is the model class created)
+15. create a superuser with python manage.py createsuperuser and then start server with point 4
+(username: Drew, email: drew@gmail.com paswd: drew)
+register the model in admin.py from food app (from .models import Item then admin.site.register(Item))
